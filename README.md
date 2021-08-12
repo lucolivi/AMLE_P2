@@ -77,5 +77,5 @@ A demo for this project is available in this link https://www.youtube.com/watch?
 This project aims to automate a pipeline for model training. To improve it even further, we can do a few things:
 
 - Get new versions of the dataset. The way the pipeline is configured it uses a static dataset, however the nature of the domain (bank client data) tends to increase the data available over time. Since more data is usually good for training a machine learning model, enhance the actual data gathering pipeline step to update the dataset would be useful.
-- Include the deploy step into the pipeline. This way after making some change (like updating the dataset) and triggering the pipeline, it will complete the full cycle of getting the data, training the model and also deploying it automatically, without human intervention.
+- Include the deploy step into the pipeline. So far the pipeline finishes after training a machine learning model using AutoML. We can enhance it by including the deployment step so after some change (like updating the dataset) trigger the pipeline, it will complete the full cycle of getting the data, training the model and also deploying it automatically, without human intervention.
 
