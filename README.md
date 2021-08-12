@@ -6,13 +6,14 @@
 2. [Architectural Diagram](#architectural-diagram)
 3. [Key Steps](#key-steps)
 4. [Screen Recording](#screen-recording)
+5. [Further Improvements](#further-improvements)
 
 
 ## Overview
 
-In this project we are using the [bank marketing dataset](https://archive.ics.uci.edu/ml/datasets/bank+marketing) to do two things:
-- Train a model using Azure AutoML, deploying the best model and debugging its webservice;
-- Create, run and publish a pipeline to trigger automatically a model training using Azure AutoML.
+In this project we are using the [bank marketing dataset](https://archive.ics.uci.edu/ml/datasets/bank+marketing) to predict whether or not a bank client will subscribe to a term deposit. This task is divided into two parts:
+- Train a model using Azure AutoML, deploying the best model and consume and debug its API using a REST endpoint;
+- Create, run and publish a pipeline so we can use a REST endpoint to trigger automatically a model training using Azure AutoML.
 
 ## Architectural Diagram
 ![](project_flow.png)
@@ -69,5 +70,12 @@ Here we use the published rest endpoint to trigger the pipeline created.
 
 
 ## Screen Recording
-A demo for this project is available in this link https://www.youtube.com/watch?v=sH_8H4oWJa4
+A demo for this project is available in this link https://www.youtube.com/watch?v=4hulm2lHSEI
+
+### Further Improvements
+
+This project aims to automate a pipeline for model training. To improve it even further, we can do a few things:
+
+- Get new versions of the dataset. The way the pipeline is configured it uses a static dataset, however the nature of the domain (bank client data) tends to increase the data available over time. Since more data is usually good for training a machine learning model, enhance the actual data gathering pipeline step to update the dataset would be useful.
+- Include the deploy step into the pipeline. This way after making some change (like updating the dataset) and triggering the pipeline, it will complete the full cycle of getting the data, training the model and also deploying it automatically, without human intervention.
 
