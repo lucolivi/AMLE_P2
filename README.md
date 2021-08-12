@@ -72,7 +72,7 @@ Here we use the published rest endpoint to trigger the pipeline created.
 ## Screen Recording
 A demo for this project is available in this link https://www.youtube.com/watch?v=4hulm2lHSEI
 
-### Further Improvements
+## Further Improvements
 
 This project aims to automate a pipeline for model training. To improve it even further, we can do a few things:
 
